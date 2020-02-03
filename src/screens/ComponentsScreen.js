@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
 const ComponentsScreen = () => {
-    const titleText = 'Getting started with React Native!'
+    const titleText = 'Getting started with React Native!';
     const name = 'Dave';
 
     return (

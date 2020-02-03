@@ -4,15 +4,15 @@ import {View, Text, StyleSheet, FlatList } from 'react-native';
 const ListScreen = () => {
     const friends = [
         // { name: 'Friend #1', key: '1' } one way to add keys to make the list happy
-        { name: 'Friend #1', key: '1' },
-        { name: 'Friend #2' },
-        { name: 'Friend #3' },
-        { name: 'Friend #4' },
-        { name: 'Friend #5' },
-        { name: 'Friend #6' },
-        { name: 'Friend #7' },
-        { name: 'Friend #8' },
-        { name: 'Friend #9' }
+        { name: 'Friend #1', age: 20 },
+        { name: 'Friend #2', age: 21 },
+        { name: 'Friend #3', age: 22 },
+        { name: 'Friend #4', age: 23 },
+        { name: 'Friend #5', age: 24 },
+        { name: 'Friend #6', age: 25 },
+        { name: 'Friend #7', age: 26 },
+        { name: 'Friend #8', age: 27 },
+        { name: 'Friend #9', age: 28 }
     ]
 
     return (
@@ -24,7 +24,9 @@ const ListScreen = () => {
             // could do item instead of element if you don't want the index
             renderItem={(element) => {
                 // element === { item: { name: 'Friend #1' }, index: 0 }
-                return <Text style={styles.textStyle}>{element.item.name}</Text>;
+            return <Text style={styles.textStyle}>
+                {element.item.name} - Age {element.item.age}
+                </Text>;
             }}
         />
     );
